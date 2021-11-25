@@ -32,25 +32,28 @@
 ## 디렉토리
 - Script_CR
     - db:
-        - Database.cs:
-        - user_info.cs:
-    - Managers :
-        - InputManager.cs:
-        - Managers.cs:
-        - ResourceManager.cs:
-        -SceneManagerEx.cs:
-        - UIManager.cs:
+    - Managers
     - Scenes
-        - BaseScene.cs
-        - GameScene.cs
-        - LogineScene.cs
-        - MenuScene.cs
-        - MyPageScene.cs
-        - SelectDifScene.cs
-        - SelectMapScene.cs
-        - SignUpScene.cs
-    
     - UI
     - Utils
+- Script_HJ
+    - AI
+    - Score
+    - WaypointManager
+- Script_HU
+    - AI
+    - Car
+    - Logitech
+    - MapandDifficultyselect
+    - Navigation
+    - SceneManager
+    - Score
+    - TrafficSystem
+    - UI
+    - WaypointManager
+- Script_MH
+    - Controller
+    - Managers
+    - Scene
 
 ## vr 연동 방법 
