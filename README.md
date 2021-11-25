@@ -1,16 +1,13 @@
 # Hanium_VR 개발 명세 
-- script 파일만 올림 => 나머지 Asset 파일 모두 유료
 
 ## 개발 환경
----------------
 - 사용 언어: C#
 - 게임 개발 프레임워크: Unity
     - Unity 버전: 2020.3.18f1 
 
 ## 사용 Package
----------------
-### 계정별로 다운 받아야할 Asset 목록이 다름.
-### Unity Asset Store에서 다운 
+#### 계정별로 다운 받아야할 Asset 목록이 다름.
+#### Unity Asset Store에서 다운 
 - lhwool0915@gmail.com
     - Clean Vector Icons: navigation을 위한 패키지
     - VR Keyboard: VR을 통해 입력을 받기 위한 패키지
@@ -32,6 +29,28 @@
 ## 서버 DB 연동
 
 ## 디렉토리
-
+- Script_CR
+    - db:
+        - Database.cs:
+        - user_info.cs:
+    - Managers :
+        - InputManager.cs:
+        - Managers.cs:
+        - ResourceManager.cs:
+        -SceneManagerEx.cs:
+        - UIManager.cs:
+    - Scenes
+        - BaseScene.cs
+        - GameScene.cs
+        - LogineScene.cs
+        - MenuScene.cs
+        - MyPageScene.cs
+        - SelectDifScene.cs
+        - SelectMapScene.cs
+        - SignUpScene.cs
+    
+    - UI
+    - Utils
 
 ## vr 연동 방법 
+--------------
