@@ -6,6 +6,13 @@
 - 게임 개발 프레임워크: Unity
     - Unity 버전: 2020.3.18f1 
 
+## 개발 프로젝트 내용
+- 초보 운전자를 위해 사고가 많이 발생하는 상황을 VR 시뮬레이션으로 구현하여 운전 연습을 가능하도록 함.
+- 일반 운전, 어린이 보호 구역, 산간 도로, 주차장 총 4가지의 상황을 각각 3단계의 난이도로 구현 
+- 각 난이도 별 운전 맵에서 시간 또한 선택 가능: 낮과 밤 둘 중 하나 선택 
+- 돌발 상황 대비를 위해 각 맵 별 이벤트는 랜덤으로 발생 
+    - 각 맵 별 랜덤 이벤트는 다음과 같음 (** 추가 요망)
+
 ## 사용 Package
 #### 계정별로 다운 받아야할 Asset 목록이 다름.
 #### Unity Asset Store에서 다운 
@@ -36,7 +43,23 @@
 
 ## 서버 DB 연동
 
-## 디렉토리
+## 전체 디렉토리
+- Img: VR UI 화면에서 사용되는 img 파일
+- Scenes: 구현한 게임 맵
+    - GameScene
+        - MountainRoad: 산간 도로 구역, 3가지 난이도 + 낮과 밤 = 6가지 Scene
+        - NormalMap: 일반 도로 구역, 3가지 난이도 + 낮과 밤 = 6가지 Scene
+        - Park: 주차장 구역, 3가지 난이도 + 낮과 밤 = 6가지 Scene
+        - SchoolZONE: 어린이 보호 구역(일반 도로 구역에서 코스를 바꾼 형태), 3가지 난이도 + 낮과 밤 = 6가지 Scene
+    - UIScene_Complete: VR 사용자 UI 화면
+        - Login: 로그인 화면
+        - Menu: 사용자 메뉴 화면
+        - SelectDif: 난이도 선택 화면
+        - SelectMap: 맵 선택 화면
+- Script: 게임 동작을 위한 c# 코드 파일
+- resources: 게임 상황 속에서 실시간으로 객체를 Scene에 Spawn하기 위한 오브젝트 파일
+
+## Scrit 디렉토리 
 - Script_CR
     - db:
     - Managers
@@ -59,9 +82,16 @@
     - UI
     - WaypointManager
 - Script_MH
-    - Controller
-    - Managers
+    - Controller: 게임 상황에서 게임 상태와 점수를 동작하는 Script
+        - PlayState.cs: 게임의 각각 상태에 따라 Event를 발생
+        - PlayScore.cs: 게임 점수 감점을 위한 Collision 및 Trigger 감지
+        - Timer.cs: VR 화면 UI의 타이머 조작
+    - Managers: 전체 게임을 관리하는 Script
+        - PlayStateManager.cs: 게임 상태 관리 Script
+        - ScoreManager.cs: 전체 게임 점수 관리
+        - SoundManager.cs: 게임의 사운드 관리
     - Scene
+        - Player_Spawn.cs: 사용자 객체 Scene에 Spawn하기 위한 Script -> 사용 x
 
 - VRKeyboard: VR 입력을 받기 위한 cs파일 폴더, VR Keyboard 패캐지 내의 파일
     - KeybaordManager.cs: input Text를 받기 위해 코드 수정
