@@ -80,6 +80,8 @@
         - CarWaypointManagerWindow.cs: Car Waypoint 생성을 위한 설정
 - Script_HU
     - AI: npc 차량, 사람 출현과 동작을 관리하는 Script
+        - CharacterNavigationController.cs:
+        - 
     - Car
     - Logitech
     - MapandDifficultyselect: 
