@@ -74,7 +74,10 @@
     - Score: 게임 플레이 관련 UI를 관리하는 Script
         - PauseUI.cs: 게임 중 정지 버튼을 눌렀을 때 나타나는 UI 동작 설정
         - ScoreUI_2.cs: 게임 종료 후 점수와 감점 항목을 보여주는 UI 동작 설정
-    - WaypointManager
+    - WaypointManager: 오브젝트 이동 경로 관리하는 Script
+        - WaypointEditor.cs: 이동 경로 지정하는 속성 설정
+        - PedestriansWaypointManagerWindow.cs: Animal Waypoint 생성을 위한 설정
+        - CarWaypointManagerWindow.cs: Car Waypoint 생성을 위한 설정
 - Script_HU
     - AI
     - Car
