@@ -80,17 +80,52 @@
         - CarWaypointManagerWindow.cs: Car Waypoint 생성을 위한 설정
 - Script_HU
     - AI: npc 차량, 사람 출현과 동작을 관리하는 Script
-        - CharacterNavigationController.cs:
-        - 
+        - CharacterNavigationController.cs: 보행자npc의 동작(애니메이션, 속도, 방향)을 설정
+        - LightController.cs: 자동차npc의 깜빡이 설정 -> 사용x
+        - NpcCarController.cs: 자동차npc의 동작(바퀴, 속도, 방향)을 설정
+        - NpcCarSpawn.cs: 자동차npc 스폰 위치 설정
+        - PedestrianSpawner.cs:보행자npc 스폰 위치 설정
     - Car
+        - Controller.cs: 플레이어 자동차를 로지텍 g29의 변수값에 따라 작동하게 설정
+        - SDKInputManager.cs: 로지텍 g29에서 핸들, 페달에 대한 값을 변수로 설정
+        - SpeedCalculate.cs: 플레이어 자동차의 스피드를 계산      
     - Logitech
+        - LogitechInput.cs: 로지텍 g29에 변수에 대한 기본 설정
+        - LogitechKeyCode.cs: 로지텍 g29의 키코드
     - MapandDifficultyselect: 
+        - Moutain: 난이도, 시간대에 대한 산간도로 Scene의 6개 스크립트
+        - Normal: 난이도, 시간대에 대한 일반 Scene의 6개 스크립트
+        - Park: 난이도, 시간대에 대한 주차장 Scene의 6개 스크립트
+        - School: 난이도, 시간대에 대한 어린이보호구역 Scene의 6개 스크립트
     - Navigation
+        - navi_straight.cs: 직진 구간에서 직진 화살표 띄워줌
+        - navi_turn_left.cs: 좌회전 구간에서 직진 화살표 띄워줌
+        - navi_turn_right.cs: 우회전 구간에서 직진 화살표 띄워줌
+        - navi_uturn.cs: 유턴 구간에서 직진 화살표 띄워줌
     - SceneManager
+        - Days.cs: 일반도로/ 어린이보호구역/ 주차장 맵에서 낮 표현(에셋에서 제공해줌)
+        - Nights.cs: 일반도로/ 어린이보호구역/ 주차장 맵에서 밤 표현(에셋에서 제공해줌)
+        - FindLingts.cs: 일반도로/ 어린이보호구역에 있는 light를 가져오는 스크립트 -> 사용안함
     - Score
+        - overspeed.cs: 과속에 대한 채점
+        - suddenstop_score.cs: 급정거에 대한 채점
+        - trafficsing_score.cs: 신호체계에 대한 채점
     - TrafficSystem
+        - CarTrafficManager.cs: 신호에 따라 cube와 cubestart에 닿은 npc자동차들의 속도를 0으로 바꿈
+        - CubestartTrigger.cs: cubestart에 닿은 npc자동차를 저장
+        - CubeTrigger.cs: cube에 닿는 npc자동차 리스트를 저장
+        - PedestrianTrafficManger.cs: 신호에따라 보행자의 waypoint 조절
     - UI
+        - CountDown.cs: 주행 시작에 대한 Countdown UI
+        - GameTime.cs: 주행 시간에 대한 UI -> 사용안함
+        - mirrorInvisible.cs: 로지텍 g29 핸들의 버튼을 누르면 백, 사이드 미러의 UI를 띄워줌
+        - puasescreen.cs: 로지텍 g29 핸들의 버튼을 누르면 잠시멈춤/ 홈화면/ 다시 시작에 대한 UI를 띄워줌
     - WaypointManager
+        - CarWaypointManagerWindow.cs: npc 자동차 waypoint를 위한 커스텀 창 설정
+        - PedestriansWaypointManagerWindow.cs: npc 보행자 waypoint를 위한 커스텀 창 설정
+        - WaypointEditor.cs: waypoint 설정(크기, 색)에 대한 스크립트
+        - Waypointer.cs: waypoint 설정(이전, 다음 waypoint, branchratio)에 대한 스크립트
+        - WaypointNavigator.cs: waypoint를 따라 일정한 방향으로 이동하게 하는 스크립트
 - Script_MH
     - Controller: 게임 상황에서 게임 상태와 점수를 동작하는 Script
         - PlayState.cs: 게임의 각각 상태에 따라 Event를 발생
@@ -114,3 +149,8 @@
 
 ## 시연 영상 Youtube URL
 - https://www.youtube.com/watch?v=D9rMlxR0AeM
+
+## 참고 자료
+[C#과 유니티로 만드는 MMORPG 게임 개발 시리즈] Part3: 유니티 엔진 - 인프런
+[Building a Traffic System in Unity] Game Dev Guide - 유튜브
+[Unity Logitech Steering Wheel Using Logitech Gaming SDK -Tutorial] Z Studio - 유튜브
