@@ -79,10 +79,10 @@
         - PedestriansWaypointManagerWindow.cs: Animal Waypoint 생성을 위한 설정
         - CarWaypointManagerWindow.cs: Car Waypoint 생성을 위한 설정
 - Script_HU
-    - AI
+    - AI: npc 차량, 사람 출현과 동작을 관리하는 Script
     - Car
     - Logitech
-    - MapandDifficultyselect
+    - MapandDifficultyselect: 
     - Navigation
     - SceneManager
     - Score
