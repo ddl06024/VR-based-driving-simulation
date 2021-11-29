@@ -71,7 +71,9 @@
         - AnimalSpawner.cs: 지정된 위치 안에 야생동물을 랜덤하게 발생시킴
         - NpcCarSpawner.cs: 지정된 위치 안에 차량을 랜덤하게 발생시킴
         - NpcCarController.cs: 속도, 회전값 등 npc 차량 관련 움직임 설정
-    - Score
+    - Score: 게임 플레이 관련 UI를 관리하는 Script
+        - PauseUI.cs: 게임 중 정지 버튼을 눌렀을 때 나타나는 UI 동작 설정
+        - ScoreUI_2.cs: 게임 종료 후 점수와 감점 항목을 보여주는 UI 동작 설정
     - WaypointManager
 - Script_HU
     - AI
