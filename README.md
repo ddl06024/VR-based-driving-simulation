@@ -67,7 +67,10 @@
     - UI
     - Utils
 - Script_HJ
-    - AI
+    - AI: npc 차량, 야생동물 출현과 동작을 관리하는 Script
+        - AnimalSpawner.cs: 지정된 위치 안에 야생동물을 랜덤하게 발생시킴
+        - NpcCarSpawner.cs: 지정된 위치 안에 차량을 랜덤하게 발생시킴
+        - NpcCarController.cs: 속도, 회전값 등 npc 차량 관련 움직임 설정
     - Score
     - WaypointManager
 - Script_HU
