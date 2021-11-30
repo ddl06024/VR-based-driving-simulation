@@ -53,11 +53,11 @@ public class UI_Button_SelectDif : UI_Popup
             start = 26;
         }
 
-        if (map_diff == 1 && map_name != "Park")
+        if (map_diff == 1)
         {
             start = start + 2;
         }
-        else if (map_diff == 2 && map_name != "Park")
+        else if (map_diff == 2)
         {
             start = start + 4;
         }
@@ -66,8 +66,8 @@ public class UI_Button_SelectDif : UI_Popup
         {
             start = start + 1;
         }
-
         return start;
+        
     }
 
     public void OnNextButtonClicked(PointerEventData data)
