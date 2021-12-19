@@ -42,6 +42,8 @@
 
 
 ## 서버 DB 연동
+- Database: Mysql 8.7
+- Server: AWS EC2
 
 ## 전체 디렉토리
 - Img: VR UI 화면에서 사용되는 img 파일
