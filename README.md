@@ -61,11 +61,34 @@
 
 ## Scrit 디렉토리 
 - Script_CR
-    - db:
+    - db: 데이터베이스 및 서버와 unity 프로젝트를 연동
+        - Database.cs: 로그인, 로그아웃, 게임 환경 설정 등의 정보를 데이터베이스와 연동
+        - user_info.cs: 유저의 정보를 클래스 형태로 저장하고 get,set 함수로 사용할 수 있게 함 
     - Managers
-    - Scenes
-    - UI
-    - Utils
+        - Managers.cs: Manager 파일을 관리
+        - InputManager.cs: 마우스 입력 등을 관리. 사용x
+        - ResourceManager.cs: prefab 등의 자원을 관리
+        - SceneManagerEx.cs: game scene 관리
+        - UIManager.cs: UI 요소 관리
+    - Scenes: 모든 게임 Scene 각각에 대한 파일
+        - BaseScene.cs: 모든 Scene class에 대한 abstract class를 포함
+        - GameScene.cs: 모든 게임 scene에 대한 scene class 포함
+        - LoginScene.cs: 로그인 scene에 대한 scene class 포함
+        - MenuScene.cs: 메뉴 선택 scene에 대한 scene class 포함
+        - MyPageScene.cs: 마이페이지 scene에 대한 scene class 포함
+        - SelectDifScene.cs: 난이도 선택 scene에 대한 scene class 포함
+        - SelectMapScene.cs: 맵 선택 scene에 대한 scene class 포함
+        - SignUpScene.cs: 회원가입 scene에 대한 scene class 포함
+    - UI: 게임 UI 관리
+        - Buttton: 각 Scene에 존재하는 버튼, 슬라이더 등 objects에 대한 기능 설정
+        - UI_Base.cs: 모든 UI 요소에 대한 abstract class 포함
+        - UI_EventHandler.cs: 마우스 클릭에 대한 event handler
+        - UI_Popup.cs: 팝업 창 관리
+        - UI_Scene.cs: UI Scene 초기화
+    - Utils: 필요한 기능 
+        - Define.cs: 게임 Scene, 소리 등을 정의
+        - User.cs: 유저의 개인 정보 저장. 사용 x
+        - Util.cs: get 함수 등 필요한 기능
 - Script_HJ
     - AI: npc 차량, 야생동물 출현과 동작을 관리하는 Script
         - AnimalSpawner.cs: 지정된 위치 안에 야생동물을 랜덤하게 발생시킴
