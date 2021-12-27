@@ -175,6 +175,13 @@
 ## 시연 영상 Youtube URL
 - https://www.youtube.com/watch?v=D9rMlxR0AeM
 
+## 개발 보고서및 개발 설계서
+- https://drive.google.com/file/d/17idjbIxHvtylcPjYyWFMzYcwaM1nY1lb/view?usp=sharing
+- https://docs.google.com/presentation/d/1iOpdO4zn_j-Z-gvhGlMAc6yuGGC9NjRIQfbK6B4WKVw/edit?usp=sharing
+
+## 논문 URL
+- https://www.koreascience.or.kr/article/CFKO202133648950951.pdf
+
 ## 참고 자료
 [C#과 유니티로 만드는 MMORPG 게임 개발 시리즈] Part3: 유니티 엔진 - 인프런
 [Building a Traffic System in Unity] Game Dev Guide - 유튜브
